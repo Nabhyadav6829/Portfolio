@@ -30,12 +30,12 @@ const Projects = () => {
     {
       id: 1,
       title: 'Ride Ease',
-      description: 'A ride-sharing application with multiple pickups and drop-offs, driver matching, and payment processing.',
+      description: "An application with multiple pickups and drop-offs locations, driver matching, and payment processing and more.",
       image: 'https://placehold.co/600x400/1e293b/cyan?text=Ride-Ease',
       category: 'fullstack',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      liveUrl: '', // Coming soon instead of link
+      githubUrl: '', // Coming soon instead of link
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ const Projects = () => {
       image: 'https://placehold.co/600x400/1e293b/cyan?text=Baskito',
       category: 'fullstack',
       techStack: ['Node.js', 'MongoDB', 'Express','CSS','HTML'],
-      liveUrl: 'https://example.com',
+      liveUrl: '', // Removed demo link
       githubUrl: 'https://github.com',
     },
     {
@@ -54,8 +54,8 @@ const Projects = () => {
       image: 'https://placehold.co/600x400/1e293b/cyan?text=Portfolio',
       category: 'frontend',
       techStack: ['React', 'Tailwind CSS', 'JavaScript'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      liveUrl: 'https://nabh-yadav-portfolio.vercel.app/',
+      githubUrl: 'https://github.com/Nabhyadav6829/Portfolio',
     },
     {
       id: 4,
@@ -160,7 +160,7 @@ const Projects = () => {
 
                 {/* Links */}
                 <div className="flex gap-3">
-                  {project.liveUrl && (
+                  {project.liveUrl ? (
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -170,16 +170,22 @@ const Projects = () => {
                       <FaExternalLinkAlt size={14} />
                       Demo
                     </a>
+                  ) : (
+                    <span className="text-slate-400 text-sm font-semibold italic">Coming Soon</span>
                   )}
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-slate-400 hover:text-white transition-colors text-sm font-semibold"
-                  >
-                    <FaGithub size={16} />
-                    Code
-                  </a>
+                  {project.githubUrl ? (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-slate-400 hover:text-white transition-colors text-sm font-semibold"
+                    >
+                      <FaGithub size={16} />
+                      Code
+                    </a>
+                  ) : (
+                    <span className="text-slate-400 text-sm font-semibold italic">Coming Soon</span>
+                  )}
                 </div>
               </div>
 

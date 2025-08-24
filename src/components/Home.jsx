@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import ProfileImage from '../assets/ProfileImage.png';
 
-const Hero = () => {
+const Home = () => {
   return (
     // Main container
     <section id="home" className="bg-slate-900 pt-12 px-4 font-sans text-slate-100">
@@ -15,7 +15,7 @@ const Hero = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-20">
 
             {/* Left Column: Text Content */}
-            <div className="md:w-1/2 text-center md:text-left">
+            <div className="md:w-1/2 text-center md:text-left max-[995px]:mt-24">
               {/* Main Heading */}
               <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-4">
                 Hi, I am <span className="text-cyan-400">Nabh Yadav</span>
@@ -37,61 +37,45 @@ const Hero = () => {
               </a>
 
               {/* Social Media Links */}
-         
-         
-         
-         
-         
-         
-         
-         
-         
-           <div className="flex justify-center md:justify-start space-x-6 mt-16">
-  <a
-    href="https://github.com/Nabhyadav6829"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="GitHub"
-    className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
-  >
-    <FaGithub size={32} />
-  </a>
+              <div className="flex justify-center md:justify-start space-x-6 mt-16">
+                <a
+                  href="https://github.com/Nabhyadav6829"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  <FaGithub size={32} />
+                </a>
 
-  <a
-    href="https://www.linkedin.com/in/nabh-yadav-aaa82a295/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-    className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
-  >
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png"
-      alt="LinkedIn Logo"
-      className="w-8 h-8"
-    />
-  </a>
+                <a
+                  href="https://www.linkedin.com/in/nabh-yadav-aaa82a295/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/2048px-LinkedIn_icon.svg.png"
+                    alt="LinkedIn Logo"
+                    className="w-8 h-8"
+                  />
+                </a>
 
-  <a
-    href="https://leetcode.com/u/nabhyadav/"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LeetCode"
-    className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
-  >
-    <img
-      src="https://assets.leetcode.com/users/leetcode/avatar_1568224780.png"
-      alt="LeetCode Avatar"
-      className="w-8 h-8"
-    />
-  </a>
-</div>
-
-
-
-
-
-
-
+                <a
+                  href="https://leetcode.com/u/nabhyadav/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LeetCode"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors duration-300"
+                >
+                  <img
+                    src="https://assets.leetcode.com/users/leetcode/avatar_1568224780.png"
+                    alt="LeetCode Avatar"
+                    className="w-8 h-8"
+                  />
+                </a>
+              </div>
             </div>
 
             {/* Right Column: Image */}
@@ -110,4 +94,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Home;

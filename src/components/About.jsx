@@ -1,34 +1,13 @@
 import React from 'react';
 import { FaCode, FaLightbulb, FaRocket, FaHeart } from 'react-icons/fa';
 import IMG from '../assets/young-man.png';
+
 const About = () => {
-  const highlights = [
-    {
-      icon: <FaCode size={24} />,
-      title: "Clean Code",
-      description: "Writing maintainable, scalable, and efficient code that stands the test of time."
-    },
-    {
-      icon: <FaLightbulb size={24} />,
-      title: "Problem Solver",
-      description: "Turning complex challenges into elegant solutions through creative thinking."
-    },
-    {
-      icon: <FaRocket size={24} />,
-      title: "Performance",
-      description: "Optimizing applications for speed, accessibility, and user experience."
-    },
-    {
-      icon: <FaHeart size={24} />,
-      title: "Passion Driven",
-      description: "Genuinely passionate about technology and creating meaningful digital experiences."
-    }
-  ];
 
   return (
     <section id="about" className="bg-slate-900 py-20 px-4 font-sans text-slate-100">
       <div className="container max-w-6xl mx-auto">
-        
+
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-4">
@@ -39,9 +18,9 @@ const About = () => {
 
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row items-center gap-16">
-          
-          {/* Left Column: Image */}
-          <div className="lg:w-1/2 flex justify-center">
+
+          {/* Left Column: Image (Now hidden on small screens) */}
+          <div className="hidden lg:flex lg:w-1/2 justify-center">
             <div className="relative">
               <img
                 src={IMG}
@@ -50,7 +29,7 @@ const About = () => {
               />
               {/* Decorative gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent rounded-3xl"></div>
-              
+
               {/* Floating accent elements */}
               <div className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full blur-sm opacity-60"></div>
               <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-sm opacity-60"></div>
@@ -59,29 +38,24 @@ const About = () => {
 
           {/* Right Column: Content */}
           <div className="lg:w-1/2 text-center lg:text-left">
-            
+
             {/* Main Description */}
             <div className="mb-12">
               <h3 className="text-2xl md:text-3xl font-bold text-cyan-400 mb-6">
-                Crafting Digital Experiences
+                Full-Stack MERN Developer
               </h3>
               <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                I'm a passionate full-stack developer with over 3 years of experience creating 
-                modern web applications. My journey began with curiosity about how websites work, 
-                and it has evolved into a deep love for building scalable, user-centric solutions.
+                I am a MERN Stack Developer with a passion for building complete, end-to-end web applications. I specialize in leveraging React to craft dynamic, responsive, and intuitive front-end interfaces that deliver a seamless user experience.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed mb-6">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the developer community. I believe 
-                in continuous learning and staying ahead of the curve in this ever-evolving field.
+                On the server-side, I utilize Node.js and Express.js to architect and build robust, scalable RESTful APIs. I am skilled in managing the application's data layer with MongoDB, ensuring efficient and reliable database performance.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed">
-                My approach combines technical expertise with creative problem-solving to deliver 
-                solutions that not only work flawlessly but also provide exceptional user experiences.
+                My goal is to bring ideas to life by handling the entire development lifecycle, from concept to deployment. I am eager to apply my MERN stack expertise to build high-performance web solutions in a collaborative environment.
               </p>
             </div>
 
-            
+
           </div>
         </div>
       </div>

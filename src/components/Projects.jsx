@@ -35,7 +35,7 @@ const Projects = () => {
       category: 'fullstack',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML'],
       liveUrl: '', // Coming soon instead of link
-      githubUrl: '', // Coming soon instead of link
+      githubUrl: 'https://github.com/Nabhyadav6829/Ride-Ease/', 
     },
     {
       id: 2,

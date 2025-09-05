@@ -4,6 +4,10 @@ import {
   SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJavascript,
   SiHtml5, SiCss3
 } from 'react-icons/si';
+import rideEaseImg from '../assets/ride-easeimg.png';
+import portfolio from '../assets/portfolio.png';
+import baskito from '../assets/baskito.png';
+import weatherwave from '../assets/weather-wave.png';
 
 const Projects = () => {
   const [selectedFilter, setSelectedFilter] = useState('all');
@@ -30,38 +34,38 @@ const Projects = () => {
     {
       id: 1,
       title: 'Ride Ease',
-      description: 'A ride-sharing application with multiple pickups and drop-offs, driver matching, and payment processing.',
-      image: 'https://placehold.co/600x400/1e293b/cyan?text=Ride-Ease',
+      description: "An application with multiple pickups and drop-offs locations, driver matching, and payment processing and more.",
+      image: rideEaseImg,
       category: 'fullstack',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      liveUrl: 'https://ride-ease.onrender.com', 
+      githubUrl: 'https://github.com/Nabhyadav6829/Ride-Ease/', 
     },
     {
       id: 2,
       title: 'Baskito',
       description: 'A full-featured e-commerce platform with real-time inventory management, secure payment processing, and admin dashboard.',
-      image: 'https://placehold.co/600x400/1e293b/cyan?text=Baskito',
+      image: baskito,
       category: 'fullstack',
       techStack: ['Node.js', 'MongoDB', 'Express','CSS','HTML'],
-      liveUrl: 'https://example.com',
+      liveUrl: '', 
       githubUrl: 'https://github.com',
     },
     {
       id: 3,
       title: 'Portfolio Website',
       description: 'A responsive portfolio website with smooth animations and modern design.',
-      image: 'https://placehold.co/600x400/1e293b/cyan?text=Portfolio',
+      image: portfolio,
       category: 'frontend',
       techStack: ['React', 'Tailwind CSS', 'JavaScript'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      liveUrl: 'https://nabh-yadav-portfolio.vercel.app/',
+      githubUrl: 'https://github.com/Nabhyadav6829/Portfolio',
     },
     {
       id: 4,
       title: 'Weather-wave',
       description: 'A beautiful weather dashboard with location-based forecasts and interactive UI.',
-      image: 'https://placehold.co/600x400/1e293b/cyan?text=Weather-wave',
+      image: weatherwave,
       category: 'frontend',
       techStack: ['JavaScript', 'HTML', 'CSS'],
       liveUrl: 'https://weathr-wave.netlify.app/',
@@ -160,7 +164,7 @@ const Projects = () => {
 
                 {/* Links */}
                 <div className="flex gap-3">
-                  {project.liveUrl && (
+                  {project.liveUrl ? (
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -170,16 +174,22 @@ const Projects = () => {
                       <FaExternalLinkAlt size={14} />
                       Demo
                     </a>
+                  ) : (
+                    <span className="text-slate-400 text-sm font-semibold italic">Coming Soon</span>
                   )}
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-1 text-slate-400 hover:text-white transition-colors text-sm font-semibold"
-                  >
-                    <FaGithub size={16} />
-                    Code
-                  </a>
+                  {project.githubUrl ? (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-1 text-slate-400 hover:text-white transition-colors text-sm font-semibold"
+                    >
+                      <FaGithub size={16} />
+                      Code
+                    </a>
+                  ) : (
+                    <span className="text-slate-400 text-sm font-semibold italic">Coming Soon</span>
+                  )}
                 </div>
               </div>
 

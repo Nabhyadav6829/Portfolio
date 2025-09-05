@@ -82,14 +82,14 @@ const Skills = () => {
           </p>
         </div>
 
-        {/* Category Tabs */}
-        <div className="flex flex-wrap justify-center mb-16">
-          <div className="bg-slate-800/60 backdrop-blur-md rounded-full border border-slate-600/50 p-2">
+        {/* Category Tabs (Now Responsive) */}
+        <div className="flex justify-center mb-16">
+          <div className="flex flex-wrap justify-center gap-2 bg-slate-800/60 backdrop-blur-md rounded-2xl md:rounded-full border border-slate-600/50 p-2">
             {categories.map((category) => (
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
-                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 mx-1 ${
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
                   selectedCategory === category
                     ? 'bg-gradient-to-r from-cyan-500 to-blue-500 text-white shadow-lg shadow-cyan-500/30'
                     : 'text-slate-300 hover:text-cyan-400 hover:bg-slate-700/50'
@@ -152,9 +152,7 @@ const Skills = () => {
             ))}
           </div>
         </div>
-       
-
-       
+        
       </div>
     </section>
   );

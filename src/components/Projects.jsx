@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaReact, FaNode } from 'react-icons/fa';
-import { 
+import {
   SiTailwindcss, SiMongodb, SiPostgresql, SiExpress, SiJavascript,
   SiHtml5, SiCss3
 } from 'react-icons/si';
@@ -38,8 +38,8 @@ const Projects = () => {
       image: rideEaseImg,
       category: 'fullstack',
       techStack: ['React', 'Node.js', 'Express', 'MongoDB', 'HTML'],
-      liveUrl: 'https://ride-ease.onrender.com', 
-      githubUrl: 'https://github.com/Nabhyadav6829/Ride-Ease/', 
+      liveUrl: 'https://ride-ease.onrender.com',
+      githubUrl: 'https://github.com/Nabhyadav6829/Ride-Ease/',
     },
     {
       id: 2,
@@ -48,7 +48,7 @@ const Projects = () => {
       image: baskito,
       category: 'fullstack',
       techStack: ['Node.js', 'MongoDB', 'Express','CSS','HTML'],
-      liveUrl: '', 
+      liveUrl: '',
       githubUrl: 'https://github.com',
     },
     {
@@ -116,27 +116,38 @@ const Projects = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="group relative bg-slate-800/60 backdrop-blur-md rounded-2xl border border-slate-600/50 overflow-hidden hover:transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 w-full max-w-sm px-4 sm:w-1/2 lg:w-1/3"
+              className="group relative bg-slate-800/60 backdrop-blur-md rounded-2xl border border-slate-600/50 overflow-hidden transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 w-full max-w-sm px-4 sm:w-1/2 lg:w-1/3"
               onMouseEnter={() => setHoveredProject(project.id)}
               onMouseLeave={() => setHoveredProject(null)}
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-52 overflow-hidden rounded-xl mt-4 mb-4 border-2 border-slate-600/30">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className={`w-full h-full object-cover transition-all duration-500 rounded-lg ${
+                    hoveredProject === project.id
+                      ? 'transform scale-110 shadow-2xl shadow-cyan-500/30'
+                      : ''
+                  }`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent opacity-60"></div>
-                
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent opacity-60 rounded-lg"></div>
+
                 {/* Category Badge */}
                 <span className="absolute top-4 right-4 px-3 py-1 bg-cyan-500/20 backdrop-blur-md text-cyan-400 rounded-full text-xs font-semibold border border-cyan-400/30 capitalize">
                   {project.category}
                 </span>
+
+                {/* Image Popup Effect on Hover - Blue shade removed */}
+                <div className={`absolute inset-0 rounded-lg transition-all duration-300 ${
+                  hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
+                }`}>
+                  <div className="absolute inset-0 border-2 border-cyan-400/50 rounded-lg animate-pulse"></div>
+                </div>
               </div>
 
               {/* Project Content */}
-              <div className="p-6">
+              <div className="p-6 pt-0">
                 <h4 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                   {project.title}
                 </h4>
@@ -193,8 +204,8 @@ const Projects = () => {
                 </div>
               </div>
 
-              {/* Hover Overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-t from-cyan-500/10 to-blue-500/10 pointer-events-none transition-opacity duration-300 ${
+              {/* Hover Overlay - Blue gradient removed */}
+              <div className={`absolute inset-0 pointer-events-none transition-opacity duration-300 rounded-2xl ${
                 hoveredProject === project.id ? 'opacity-100' : 'opacity-0'
               }`}></div>
             </div>

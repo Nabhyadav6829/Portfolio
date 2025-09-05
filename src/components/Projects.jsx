@@ -49,7 +49,7 @@ const Projects = () => {
       category: 'fullstack',
       techStack: ['Node.js', 'MongoDB', 'Express','CSS','HTML'],
       liveUrl: '',
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/Nabhyadav6829/Baskito',
     },
     {
       id: 3,

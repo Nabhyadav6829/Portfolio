@@ -82,7 +82,7 @@ const Navbar = () => {
               </div>
               {windowWidth > 805 && (
                 <a
-                  href="/nabh latest resume pdf.pdf"
+                  href="/Nabh+1+resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-2 px-5 rounded-full text-sm hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 whitespace-nowrap"
@@ -120,7 +120,7 @@ const Navbar = () => {
               {/* Resume only in hamburger if width <= 805 */}
                {windowWidth <= 805 && (
                 <a
-                  href="/nabh latest resume pdf.pdf"
+                  href="/Nabh+1+resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full text-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold py-3 px-6 rounded-full text-lg hover:from-cyan-400 hover:to-blue-400 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/30 mt-2"
